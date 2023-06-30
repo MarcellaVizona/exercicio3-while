@@ -1,8 +1,17 @@
-let numero = ""
-let contador = 0
+let numero =  parseInt(prompt('Digite um numero inteiro e positivo e te mostrarei a contagem até o mesmo'));
+let contador = 1;
+let mensagem = "contagem";
 
-numero = prompt('Digite um numero inteiro e positivo e te mostrarei a contagem até o mesmo')
-
-while(contador <= numero ){
-
+if(isNaN(numero)||numero<=0 ){
+    alert("Este número não é valido");
+}else{
+     while(contador <= numero ){
+        mensagem = mensagem + ' ' + contador;
+        contador++
+    }
+     mensagem = mensagem + ' acabou';
+     alert(mensagem);
 }
+
+
+
